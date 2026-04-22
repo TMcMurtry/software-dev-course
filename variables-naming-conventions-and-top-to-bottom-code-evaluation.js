@@ -30,3 +30,18 @@ let c = 20;
 let d = a + " bought " + b + " items for $" + c + ".";
 
 console.log(d);
+
+/*The main issues I noticed were with the names of the variables not being descriptive at all, 
+I will clear them up below in new lines of code, 
+otherwise it seems like the lines of code are at least in the right order. */
+
+let customerName = "Alice";
+let itemsBought = 5;
+let dollarsSpent = 20;
+let storeName = "Walmart";
+let shoppingDay = "Tuesday";
+let customerStatement = customerName + " bought " + itemsBought + " items for $" + dollarsSpent + " at " + storeName + " on " + shoppingDay + ".";
+
+
+console.log(customerStatement);
+
