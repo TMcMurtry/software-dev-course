@@ -19,14 +19,39 @@ Use console.log() to clearly show the before-and-after type conversions.
 */
 
 
-let result = "5" - 2;
+let result = Number("5") - 2;
 console.log("The result is: " + result);
 
-let isValid = Boolean("false");
+/*This code seems to actually run fine due to implicit conversion,
+ but I still added the number function to make it look more smooth */
+
+let isValid = Boolean("true");
 if (isValid) {
     console.log("This is valid!");
 }
 
+/* To make the statement true and read well it should say true,
+ if it was meant to be false the field inside the quotes in the boolean function should be empty */
+
 let age = "25";
-let totalAge = age + 5;
+let totalAge = Number(age) + 5;
 console.log("Total Age: " + totalAge);
+
+/* This error is due to the fact that in a concatenation with a string and a number, 
+the implicit conversion turns it all to string. */
+
+/* Explicit type conversion */
+
+let ageTim = 31;
+let myName = "Tim";
+let greetingTim = "Hello, my name is " + myName + " and I am " + String(ageTim) + " years old.";
+
+console.log(greetingTim);
+
+/* Implicit type conversion */
+
+let trueStatement = "5";
+if (trueStatement == 5) {
+  console.log("This is true.")
+}
+
